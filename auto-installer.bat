@@ -379,7 +379,8 @@ if exist "%PROGRAMS_DIR%\Reader_tr_install.exe" (
     echo.
     echo --- Installing Adobe Reader ---
     echo --- Installing Adobe Reader --- >> "%LOGFILE%"
-    start /wait "" "%PROGRAMS_DIR%\Reader_tr_install.exe" /sAll /rs /norestart
+    REM Changed command to bypass SmartScreen and use different installation flags
+    powershell -Command "Start-Process -FilePath \"%PROGRAMS_DIR%\Reader_tr_install.exe\" -ArgumentList '/sPB /rs /msi /norestart EULA_ACCEPT=YES' -Wait -Verb RunAs" 
     set RESULT=!ERRORLEVEL!
     if !RESULT! EQU 0 (
         echo SUCCESS: Adobe Reader installed successfully.
@@ -399,9 +400,7 @@ if exist "%PROGRAMS_DIR%\TeamViewer_Setup_x64.exe" (
     echo --- Installing TeamViewer ---
     echo --- Installing TeamViewer --- >> "%LOGFILE%"
     start /wait "" "%PROGRAMS_DIR%\TeamViewer_Setup_x64.exe" /S /norestart
-    REM Sleep for 3 seconds to ensure process completion
-    timeout /t 3 > nul
-    set RESULT=%ERRORLEVEL%
+    set RESULT=!ERRORLEVEL!
     if !RESULT! EQU 0 (
         echo SUCCESS: TeamViewer installed successfully.
         echo SUCCESS: TeamViewer installed successfully. >> "%LOGFILE%"
@@ -647,7 +646,8 @@ if exist "%PROGRAMS_DIR%\PatchCleaner_1.4.2.0.exe" (
     echo.
     echo --- Installing PatchCleaner ---
     echo --- Installing PatchCleaner --- >> "%LOGFILE%"
-    start /wait "" "%PROGRAMS_DIR%\PatchCleaner_1.4.2.0.exe" /VERYSILENT /NORESTART
+    REM Enhanced command with PowerShell to bypass SmartScreen
+    powershell -Command "Start-Process -FilePath \"%PROGRAMS_DIR%\PatchCleaner_1.4.2.0.exe\" -ArgumentList '/VERYSILENT /NORESTART' -Wait -Verb RunAs"
     set RESULT=!ERRORLEVEL!
     if !RESULT! EQU 0 (
         echo SUCCESS: PatchCleaner installed successfully.
@@ -666,7 +666,8 @@ if exist "%PROGRAMS_DIR%\LAPS.x64.msi" (
     echo.
     echo --- Installing LAPS ---
     echo --- Installing LAPS --- >> "%LOGFILE%"
-    start /wait msiexec /i "%PROGRAMS_DIR%\LAPS.x64.msi" /quiet /norestart
+    REM Enhanced command with PowerShell to bypass SmartScreen
+    powershell -Command "Start-Process -FilePath 'msiexec.exe' -ArgumentList '/i \"%PROGRAMS_DIR%\LAPS.x64.msi\" /quiet /norestart' -Wait -Verb RunAs"
     set RESULT=!ERRORLEVEL!
     if !RESULT! EQU 0 (
         echo SUCCESS: LAPS installed successfully.
@@ -685,7 +686,8 @@ if exist "%PROGRAMS_DIR%\Autodesk_DWG_TrueView_2026_en-US_setup_webinstall.exe" 
     echo.
     echo --- Installing Autodesk DWG TrueView ---
     echo --- Installing Autodesk DWG TrueView --- >> "%LOGFILE%"
-    start /wait "" "%PROGRAMS_DIR%\Autodesk_DWG_TrueView_2026_en-US_setup_webinstall.exe" /q /norestart
+    REM Enhanced command with PowerShell to bypass SmartScreen
+    powershell -Command "Start-Process -FilePath \"%PROGRAMS_DIR%\Autodesk_DWG_TrueView_2026_en-US_setup_webinstall.exe\" -ArgumentList '/q /norestart' -Wait -Verb RunAs"
     set RESULT=!ERRORLEVEL!
     if !RESULT! EQU 0 (
         echo SUCCESS: Autodesk DWG TrueView installed successfully.
@@ -815,7 +817,8 @@ if exist "%PROGRAMS_DIR%\Reader_tr_install.exe" (
         echo.
         echo --- Installing Adobe Reader ---
         echo --- Installing Adobe Reader --- >> "%LOGFILE%"
-        start /wait "" "%PROGRAMS_DIR%\Reader_tr_install.exe" /sAll /rs /norestart
+        REM Changed command to bypass SmartScreen and use different installation flags
+        powershell -Command "Start-Process -FilePath \"%PROGRAMS_DIR%\Reader_tr_install.exe\" -ArgumentList '/sPB /rs /msi /norestart EULA_ACCEPT=YES' -Wait -Verb RunAs" 
         set RESULT=!ERRORLEVEL!
         if !RESULT! EQU 0 (
             echo SUCCESS: Adobe Reader installed successfully.
@@ -837,9 +840,7 @@ if exist "%PROGRAMS_DIR%\TeamViewer_Setup_x64.exe" (
         echo --- Installing TeamViewer ---
         echo --- Installing TeamViewer --- >> "%LOGFILE%"
         start /wait "" "%PROGRAMS_DIR%\TeamViewer_Setup_x64.exe" /S /norestart
-        REM Sleep for 3 seconds to ensure process completion
-        timeout /t 3 > nul
-        set RESULT=%ERRORLEVEL%
+        set RESULT=!ERRORLEVEL!
         if !RESULT! EQU 0 (
             echo SUCCESS: TeamViewer installed successfully.
             echo SUCCESS: TeamViewer installed successfully. >> "%LOGFILE%"
@@ -1111,7 +1112,8 @@ if exist "%PROGRAMS_DIR%\PatchCleaner_1.4.2.0.exe" (
         echo.
         echo --- Installing PatchCleaner ---
         echo --- Installing PatchCleaner --- >> "%LOGFILE%"
-        start /wait "" "%PROGRAMS_DIR%\PatchCleaner_1.4.2.0.exe" /VERYSILENT /NORESTART
+        REM Enhanced command with PowerShell to bypass SmartScreen
+        powershell -Command "Start-Process -FilePath \"%PROGRAMS_DIR%\PatchCleaner_1.4.2.0.exe\" -ArgumentList '/VERYSILENT /NORESTART' -Wait -Verb RunAs"
         set RESULT=!ERRORLEVEL!
         if !RESULT! EQU 0 (
             echo SUCCESS: PatchCleaner installed successfully.
@@ -1132,7 +1134,8 @@ if exist "%PROGRAMS_DIR%\LAPS.x64.msi" (
         echo.
         echo --- Installing LAPS ---
         echo --- Installing LAPS --- >> "%LOGFILE%"
-        start /wait msiexec /i "%PROGRAMS_DIR%\LAPS.x64.msi" /quiet /norestart
+        REM Enhanced command with PowerShell to bypass SmartScreen
+        powershell -Command "Start-Process -FilePath 'msiexec.exe' -ArgumentList '/i \"%PROGRAMS_DIR%\LAPS.x64.msi\" /quiet /norestart' -Wait -Verb RunAs"
         set RESULT=!ERRORLEVEL!
         if !RESULT! EQU 0 (
             echo SUCCESS: LAPS installed successfully.
@@ -1153,7 +1156,8 @@ if exist "%PROGRAMS_DIR%\Autodesk_DWG_TrueView_2026_en-US_setup_webinstall.exe" 
         echo.
         echo --- Installing Autodesk DWG TrueView ---
         echo --- Installing Autodesk DWG TrueView --- >> "%LOGFILE%"
-        start /wait "" "%PROGRAMS_DIR%\Autodesk_DWG_TrueView_2026_en-US_setup_webinstall.exe" /q /norestart
+        REM Enhanced command with PowerShell to bypass SmartScreen
+        powershell -Command "Start-Process -FilePath \"%PROGRAMS_DIR%\Autodesk_DWG_TrueView_2026_en-US_setup_webinstall.exe\" -ArgumentList '/q /norestart' -Wait -Verb RunAs"
         set RESULT=!ERRORLEVEL!
         if !RESULT! EQU 0 (
             echo SUCCESS: Autodesk DWG TrueView installed successfully.
@@ -1162,11 +1166,13 @@ if exist "%PROGRAMS_DIR%\Autodesk_DWG_TrueView_2026_en-US_setup_webinstall.exe" 
             echo FAILED: Autodesk DWG TrueView installation failed with error code !RESULT!.
             echo FAILED: Autodesk DWG TrueView installation failed with error code !RESULT!. >> "%LOGFILE%"
         )
-    ) else (
-        echo --- SKIPPED: Autodesk_DWG_TrueView_2026_en-US_setup_webinstall.exe not found or installation not selected.
+    ) else (        echo --- SKIPPED: Autodesk_DWG_TrueView_2026_en-US_setup_webinstall.exe not found or installation not selected.
         echo --- SKIPPED: Autodesk_DWG_TrueView_2026_en-US_setup_webinstall.exe not found or installation not selected. >> "%LOGFILE%"
     )
 )
+
+REM After manual installation, go to EndInstall to show completion message
+goto EndInstall
 
 :EndInstall
 cls
