@@ -1,4 +1,29 @@
 @echo off
+:: BatchGotAdmin
+:-------------------------------------
+REM  Check for administrative permissions and elevate if needed
+>nul 2>&1 "%SYSTEMROOT%\system32\cacls.exe" "%SYSTEMROOT%\system32\config\system"
+
+REM --> If error flag is 0, we already have admin privileges
+if %errorlevel% == 0 (
+    goto AdminStart
+) else (
+    echo Requesting administrative privileges...
+    goto UACPrompt
+)
+
+:UACPrompt
+    echo Set UAC = CreateObject^("Shell.Application"^) > "%temp%\getadmin.vbs"
+    set params = %*:"="";
+    echo UAC.ShellExecute "cmd.exe", "/c %~s0 %params%", "", "runas", 1 >> "%temp%\getadmin.vbs"
+    "%temp%\getadmin.vbs"
+    del "%temp%\getadmin.vbs"
+    exit /B
+
+:AdminStart
+    echo Running with administrative privileges...
+    pushd "%~dp0"
+    
 setlocal enabledelayedexpansion
 
 REM Setup directory paths
@@ -21,7 +46,6 @@ echo ===================================================
 timeout /t 3 > nul
 
 REM --- Installation Section ---
-
 
 
 REM Install Google Chrome
@@ -62,19 +86,19 @@ if exist "%PROGRAMS_DIR%\CitrixWorkspaceApp.exe" (
     echo --- SKIPPED: CitrixWorkspaceApp.exe not found. >> "%LOGFILE%"
 )
 
-REM Install FileZilla
+REM Install FotoSizer
 if exist "%PROGRAMS_DIR%\fsSetup319.exe" (
     echo.
-    echo --- Installing FileZilla ---
-    echo --- Installing FileZilla --- >> "%LOGFILE%"
+    echo --- Installing FotoSizer ---
+    echo --- Installing FotoSizer --- >> "%LOGFILE%"
     start /wait "" "%PROGRAMS_DIR%\fsSetup319.exe" /S /NCRC
     set RESULT=!ERRORLEVEL!
     if !RESULT! EQU 0 (
-        echo SUCCESS: FileZilla installed successfully.
-        echo SUCCESS: FileZilla installed successfully. >> "%LOGFILE%"
+        echo SUCCESS: FotoSizer installed successfully.
+        echo SUCCESS: FotoSizer installed successfully. >> "%LOGFILE%"
     ) else (
-        echo FAILED: FileZilla installation failed with error code !RESULT!.
-        echo FAILED: FileZilla installation failed with error code !RESULT!. >> "%LOGFILE%"
+        echo FAILED: FotoSizer installation failed with error code !RESULT!.
+        echo FAILED: FotoSizer installation failed with error code !RESULT!. >> "%LOGFILE%"
     )
 ) else (
     echo --- SKIPPED: fsSetup319.exe not found.
@@ -176,6 +200,101 @@ if exist "%PROGRAMS_DIR%\tightvnc-2.8.85-gpl-setup-64bit.msi" (
 ) else (
     echo --- SKIPPED: tightvnc-2.8.85-gpl-setup-64bit.msi not found.
     echo --- SKIPPED: tightvnc-2.8.85-gpl-setup-64bit.msi not found. >> "%LOGFILE%"
+)
+
+REM Install Java
+if exist "%PROGRAMS_DIR%\jre-8u451-windows-i586-iftw.exe" (
+    echo.
+    echo --- Installing Java ---
+    echo --- Installing Java --- >> "%LOGFILE%"
+    start /wait "" "%PROGRAMS_DIR%\jre-8u451-windows-i586-iftw.exe" /s REBOOT=0 SPONSORS=0 AUTO_UPDATE=1
+    set RESULT=!ERRORLEVEL!
+    if !RESULT! EQU 0 (
+        echo SUCCESS: Java installed successfully.
+        echo SUCCESS: Java installed successfully. >> "%LOGFILE%"
+    ) else (
+        echo FAILED: Java installation failed with error code !RESULT!.
+        echo FAILED: Java installation failed with error code !RESULT!. >> "%LOGFILE%"
+    )
+) else (
+    echo --- SKIPPED: jre-8u451-windows-i586-iftw.exe not found.
+    echo --- SKIPPED: jre-8u451-windows-i586-iftw.exe not found. >> "%LOGFILE%"
+)
+
+REM Install Mozilla Firefox
+if exist "%PROGRAMS_DIR%\Firefox Installer.exe" (
+    echo.
+    echo --- Installing Mozilla Firefox ---
+    echo --- Installing Mozilla Firefox --- >> "%LOGFILE%"
+    start /wait "" "%PROGRAMS_DIR%\Firefox Installer.exe" -ms
+    set RESULT=!ERRORLEVEL!
+    if !RESULT! EQU 0 (
+        echo SUCCESS: Mozilla Firefox installed successfully.
+        echo SUCCESS: Mozilla Firefox installed successfully. >> "%LOGFILE%"
+    ) else (
+        echo FAILED: Mozilla Firefox installation failed with error code !RESULT!.
+        echo FAILED: Mozilla Firefox installation failed with error code !RESULT!. >> "%LOGFILE%"
+    )
+) else (
+    echo --- SKIPPED: Firefox Installer.exe not found.
+    echo --- SKIPPED: Firefox Installer.exe not found. >> "%LOGFILE%"
+)
+
+REM Install Google Earth Pro
+if exist "%PROGRAMS_DIR%\GoogleEarthProSetup.exe" (
+    echo.
+    echo --- Installing Google Earth Pro ---
+    echo --- Installing Google Earth Pro --- >> "%LOGFILE%"
+    start /wait "" "%PROGRAMS_DIR%\GoogleEarthProSetup.exe" /VERYSILENT /NORESTART
+    set RESULT=!ERRORLEVEL!
+    if !RESULT! EQU 0 (
+        echo SUCCESS: Google Earth Pro installed successfully.
+        echo SUCCESS: Google Earth Pro installed successfully. >> "%LOGFILE%"
+    ) else (
+        echo FAILED: Google Earth Pro installation failed with error code !RESULT!.
+        echo FAILED: Google Earth Pro installation failed with error code !RESULT!. >> "%LOGFILE%"
+    )
+) else (
+    echo --- SKIPPED: GoogleEarthProSetup.exe not found.
+    echo --- SKIPPED: GoogleEarthProSetup.exe not found. >> "%LOGFILE%"
+)
+
+REM Install WinRAR
+if exist "%PROGRAMS_DIR%\winrar-x64-711tr.exe" (
+    echo.
+    echo --- Installing WinRAR ---
+    echo --- Installing WinRAR --- >> "%LOGFILE%"
+    start /wait "" "%PROGRAMS_DIR%\winrar-x64-711tr.exe" /S
+    set RESULT=!ERRORLEVEL!
+    if !RESULT! EQU 0 (
+        echo SUCCESS: WinRAR installed successfully.
+        echo SUCCESS: WinRAR installed successfully. >> "%LOGFILE%"
+    ) else (
+        echo FAILED: WinRAR installation failed with error code !RESULT!.
+        echo FAILED: WinRAR installation failed with error code !RESULT!. >> "%LOGFILE%"
+    )
+) else (
+    echo --- SKIPPED: winrar-x64-711tr.exe not found.
+    echo --- SKIPPED: winrar-x64-711tr.exe not found. >> "%LOGFILE%"
+)
+
+REM Install K-Lite Codec Pack
+if exist "%PROGRAMS_DIR%\K-Lite_Codec_Pack_1901_Standard.exe" (
+    echo.
+    echo --- Installing K-Lite Codec Pack ---
+    echo --- Installing K-Lite Codec Pack --- >> "%LOGFILE%"
+    start /wait "" "%PROGRAMS_DIR%\K-Lite_Codec_Pack_1901_Standard.exe" /VERYSILENT /NORESTART
+    set RESULT=!ERRORLEVEL!
+    if !RESULT! EQU 0 (
+        echo SUCCESS: K-Lite Codec Pack installed successfully.
+        echo SUCCESS: K-Lite Codec Pack installed successfully. >> "%LOGFILE%"
+    ) else (
+        echo FAILED: K-Lite Codec Pack installation failed with error code !RESULT!.
+        echo FAILED: K-Lite Codec Pack installation failed with error code !RESULT!. >> "%LOGFILE%"
+    )
+) else (
+    echo --- SKIPPED: K-Lite_Codec_Pack_1901_Standard.exe not found.
+    echo --- SKIPPED: K-Lite_Codec_Pack_1901_Standard.exe not found. >> "%LOGFILE%"
 )
 
 REM --- End of installations ---
