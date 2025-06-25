@@ -23,6 +23,20 @@ The script can install the following programs (if available in the `/programs` d
 6. Adobe Reader (`Reader_tr_install.exe`)
 7. TeamViewer (`TeamViewer_Setup_x64.exe`)
 8. TightVNC (`tightvnc-2.8.85-gpl-setup-64bit.msi`)
+9. Java (`jre-8u451-windows-i586-iftw.exe`)
+10. Mozilla Firefox (`Firefox Installer.exe`)
+11. Google Earth Pro (`GoogleEarthProSetup.exe`)
+12. WinRAR (`winrar-x64-711tr.exe`)
+13. K-Lite Codec Pack (`K-Lite_Codec_Pack_1901_Standard.exe`)
+14. Microsoft Teams (`MSTeamsSetup.exe`)
+15. Webex (`Webex.exe`)
+16. Zoom (`ZoomInstallerFull.exe`)
+17. AnyDesk (`AnyDesk.exe`)
+18. RustDesk (`rustdesk-1.4.0-x86_64.exe`)
+19. VirtualBox (`VirtualBox-7.1.10-169112-Win.exe`)
+20. PatchCleaner (`PatchCleaner_1.4.2.0.exe`)
+21. LAPS (`LAPS.x64.msi`)
+22. Autodesk DWG TrueView (`Autodesk_DWG_TrueView_2026_en-US_setup_webinstall.exe`)
 
 
 ## Setup Instructions
@@ -30,6 +44,13 @@ The script can install the following programs (if available in the `/programs` d
 1. Create a folder named `programs` in the same directory as the script
 2. Copy installation files into the `programs` folder
 3. Run `auto-installer.bat` with administrator privileges
+
+## Usage
+
+When you run the script, you'll be prompted to choose between two installation modes:
+
+1. **Auto Install Mode**: Automatically installs all available programs in the programs folder
+2. **Manual Mode**: Allows you to select specific programs to install by entering their numbers
 
 ## Log File
 
