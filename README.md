@@ -33,10 +33,9 @@ The script can install the following programs (if available in the `/programs` d
 16. Zoom (`ZoomInstallerFull.exe`)
 17. AnyDesk (`AnyDesk.exe`)
 18. RustDesk (`rustdesk-1.4.0-x86_64.exe`)
-19. VirtualBox (`VirtualBox-7.1.10-169112-Win.exe`)
-20. PatchCleaner (`PatchCleaner_1.4.2.0.exe`)
-21. LAPS (`LAPS.x64.msi`)
-22. Autodesk DWG TrueView (`Autodesk_DWG_TrueView_2026_en-US_setup_webinstall.exe`)
+19. PatchCleaner (`PatchCleaner_1.4.2.0.exe`)
+20. LAPS (`LAPS.x64.msi`)
+21. Autodesk DWG TrueView (`Autodesk_DWG_TrueView_2026_en-US_setup_webinstall.exe`)
 
 
 ## Setup Instructions
@@ -44,6 +43,11 @@ The script can install the following programs (if available in the `/programs` d
 1. Create a folder named `programs` in the same directory as the script
 2. Copy installation files into the `programs` folder
 3. Run `auto-installer.bat` with administrator privileges
+
+### Download Program Files
+
+You can download the required program files from this Google Drive link:
+- [Download Program Files](https://drive.google.com/drive/folders/1EqamNDzBGK7tHm-O4Iqx4xsdy3neYJoO?usp=sharing)
 
 ## Usage
 

@@ -1,4 +1,6 @@
 *.log
 *.msi
 *.exe
+*.rar
+*.zip
 install_log.txt

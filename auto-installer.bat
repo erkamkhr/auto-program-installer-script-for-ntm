@@ -81,7 +81,7 @@ if exist "%PROGRAMS_DIR%\ChromeSetup.exe" (
     set /a PROGRAM_COUNT+=1
     set "PROG_!PROGRAM_COUNT!_NAME=Google Chrome"
     set "PROG_!PROGRAM_COUNT!_FILE=ChromeSetup.exe"
-    set "AVAILABLE_LIST=!AVAILABLE_LIST!!PROGRAM_COUNT!,")
+    set "AVAILABLE_LIST=!AVAILABLE_LIST!!PROGRAM_COUNT!,"
     echo !PROGRAM_COUNT!. Google Chrome
 )
 
@@ -89,7 +89,7 @@ if exist "%PROGRAMS_DIR%\CitrixWorkspaceApp.exe" (
     set /a PROGRAM_COUNT+=1
     set "PROG_!PROGRAM_COUNT!_NAME=Citrix Workspace"
     set "PROG_!PROGRAM_COUNT!_FILE=CitrixWorkspaceApp.exe"
-    set "AVAILABLE_LIST=!AVAILABLE_LIST!!PROGRAM_COUNT!,")
+    set "AVAILABLE_LIST=!AVAILABLE_LIST!!PROGRAM_COUNT!,"
     echo !PROGRAM_COUNT!. Citrix Workspace
 )
 
@@ -97,7 +97,7 @@ if exist "%PROGRAMS_DIR%\fsSetup319.exe" (
     set /a PROGRAM_COUNT+=1
     set "PROG_!PROGRAM_COUNT!_NAME=FotoSizer"
     set "PROG_!PROGRAM_COUNT!_FILE=fsSetup319.exe"
-    set "AVAILABLE_LIST=!AVAILABLE_LIST!!PROGRAM_COUNT!,")
+    set "AVAILABLE_LIST=!AVAILABLE_LIST!!PROGRAM_COUNT!,"
     echo !PROGRAM_COUNT!. FotoSizer
 )
 
@@ -105,7 +105,7 @@ if exist "%PROGRAMS_DIR%\GlobalProtect Installer.exe" (
     set /a PROGRAM_COUNT+=1
     set "PROG_!PROGRAM_COUNT!_NAME=GlobalProtect"
     set "PROG_!PROGRAM_COUNT!_FILE=GlobalProtect Installer.exe"
-    set "AVAILABLE_LIST=!AVAILABLE_LIST!!PROGRAM_COUNT!,")
+    set "AVAILABLE_LIST=!AVAILABLE_LIST!!PROGRAM_COUNT!,"
     echo !PROGRAM_COUNT!. GlobalProtect
 )
 
@@ -113,7 +113,7 @@ if exist "%PROGRAMS_DIR%\lyncentry.exe" (
     set /a PROGRAM_COUNT+=1
     set "PROG_!PROGRAM_COUNT!_NAME=Skype/Lync"
     set "PROG_!PROGRAM_COUNT!_FILE=lyncentry.exe"
-    set "AVAILABLE_LIST=!AVAILABLE_LIST!!PROGRAM_COUNT!,")
+    set "AVAILABLE_LIST=!AVAILABLE_LIST!!PROGRAM_COUNT!,"
     echo !PROGRAM_COUNT!. Skype/Lync
 )
 
@@ -121,7 +121,7 @@ if exist "%PROGRAMS_DIR%\Reader_tr_install.exe" (
     set /a PROGRAM_COUNT+=1
     set "PROG_!PROGRAM_COUNT!_NAME=Adobe Reader"
     set "PROG_!PROGRAM_COUNT!_FILE=Reader_tr_install.exe"
-    set "AVAILABLE_LIST=!AVAILABLE_LIST!!PROGRAM_COUNT!,")
+    set "AVAILABLE_LIST=!AVAILABLE_LIST!!PROGRAM_COUNT!,"
     echo !PROGRAM_COUNT!. Adobe Reader
 )
 
@@ -129,7 +129,7 @@ if exist "%PROGRAMS_DIR%\TeamViewer_Setup_x64.exe" (
     set /a PROGRAM_COUNT+=1
     set "PROG_!PROGRAM_COUNT!_NAME=TeamViewer"
     set "PROG_!PROGRAM_COUNT!_FILE=TeamViewer_Setup_x64.exe"
-    set "AVAILABLE_LIST=!AVAILABLE_LIST!!PROGRAM_COUNT!,")
+    set "AVAILABLE_LIST=!AVAILABLE_LIST!!PROGRAM_COUNT!,"
     echo !PROGRAM_COUNT!. TeamViewer
 )
 
@@ -137,7 +137,7 @@ if exist "%PROGRAMS_DIR%\tightvnc-2.8.85-gpl-setup-64bit.msi" (
     set /a PROGRAM_COUNT+=1
     set "PROG_!PROGRAM_COUNT!_NAME=TightVNC"
     set "PROG_!PROGRAM_COUNT!_FILE=tightvnc-2.8.85-gpl-setup-64bit.msi"
-    set "AVAILABLE_LIST=!AVAILABLE_LIST!!PROGRAM_COUNT!,")
+    set "AVAILABLE_LIST=!AVAILABLE_LIST!!PROGRAM_COUNT!,"
     echo !PROGRAM_COUNT!. TightVNC
 )
 
@@ -145,7 +145,7 @@ if exist "%PROGRAMS_DIR%\jre-8u451-windows-i586-iftw.exe" (
     set /a PROGRAM_COUNT+=1
     set "PROG_!PROGRAM_COUNT!_NAME=Java"
     set "PROG_!PROGRAM_COUNT!_FILE=jre-8u451-windows-i586-iftw.exe"
-    set "AVAILABLE_LIST=!AVAILABLE_LIST!!PROGRAM_COUNT!,")
+    set "AVAILABLE_LIST=!AVAILABLE_LIST!!PROGRAM_COUNT!,"
     echo !PROGRAM_COUNT!. Java
 )
 
@@ -153,7 +153,7 @@ if exist "%PROGRAMS_DIR%\Firefox Installer.exe" (
     set /a PROGRAM_COUNT+=1
     set "PROG_!PROGRAM_COUNT!_NAME=Mozilla Firefox"
     set "PROG_!PROGRAM_COUNT!_FILE=Firefox Installer.exe"
-    set "AVAILABLE_LIST=!AVAILABLE_LIST!!PROGRAM_COUNT!,")
+    set "AVAILABLE_LIST=!AVAILABLE_LIST!!PROGRAM_COUNT!,"
     echo !PROGRAM_COUNT!. Mozilla Firefox
 )
 
@@ -161,7 +161,7 @@ if exist "%PROGRAMS_DIR%\GoogleEarthProSetup.exe" (
     set /a PROGRAM_COUNT+=1
     set "PROG_!PROGRAM_COUNT!_NAME=Google Earth Pro"
     set "PROG_!PROGRAM_COUNT!_FILE=GoogleEarthProSetup.exe"
-    set "AVAILABLE_LIST=!AVAILABLE_LIST!!PROGRAM_COUNT!,")
+    set "AVAILABLE_LIST=!AVAILABLE_LIST!!PROGRAM_COUNT!,"
     echo !PROGRAM_COUNT!. Google Earth Pro
 )
 
@@ -169,7 +169,7 @@ if exist "%PROGRAMS_DIR%\winrar-x64-711tr.exe" (
     set /a PROGRAM_COUNT+=1
     set "PROG_!PROGRAM_COUNT!_NAME=WinRAR"
     set "PROG_!PROGRAM_COUNT!_FILE=winrar-x64-711tr.exe"
-    set "AVAILABLE_LIST=!AVAILABLE_LIST!!PROGRAM_COUNT!,")
+    set "AVAILABLE_LIST=!AVAILABLE_LIST!!PROGRAM_COUNT!,"
     echo !PROGRAM_COUNT!. WinRAR
 )
 
@@ -177,7 +177,7 @@ if exist "%PROGRAMS_DIR%\K-Lite_Codec_Pack_1901_Standard.exe" (
     set /a PROGRAM_COUNT+=1
     set "PROG_!PROGRAM_COUNT!_NAME=K-Lite Codec Pack"
     set "PROG_!PROGRAM_COUNT!_FILE=K-Lite_Codec_Pack_1901_Standard.exe"
-    set "AVAILABLE_LIST=!AVAILABLE_LIST!!PROGRAM_COUNT!,")
+    set "AVAILABLE_LIST=!AVAILABLE_LIST!!PROGRAM_COUNT!,"
     echo !PROGRAM_COUNT!. K-Lite Codec Pack
 )
 
@@ -185,7 +185,7 @@ if exist "%PROGRAMS_DIR%\MSTeamsSetup.exe" (
     set /a PROGRAM_COUNT+=1
     set "PROG_!PROGRAM_COUNT!_NAME=Microsoft Teams"
     set "PROG_!PROGRAM_COUNT!_FILE=MSTeamsSetup.exe"
-    set "AVAILABLE_LIST=!AVAILABLE_LIST!!PROGRAM_COUNT!,")
+    set "AVAILABLE_LIST=!AVAILABLE_LIST!!PROGRAM_COUNT!,"
     echo !PROGRAM_COUNT!. Microsoft Teams
 )
 
@@ -193,7 +193,7 @@ if exist "%PROGRAMS_DIR%\Webex.exe" (
     set /a PROGRAM_COUNT+=1
     set "PROG_!PROGRAM_COUNT!_NAME=Webex"
     set "PROG_!PROGRAM_COUNT!_FILE=Webex.exe"
-    set "AVAILABLE_LIST=!AVAILABLE_LIST!!PROGRAM_COUNT!,")
+    set "AVAILABLE_LIST=!AVAILABLE_LIST!!PROGRAM_COUNT!,"
     echo !PROGRAM_COUNT!. Webex
 )
 
@@ -201,7 +201,7 @@ if exist "%PROGRAMS_DIR%\ZoomInstallerFull.exe" (
     set /a PROGRAM_COUNT+=1
     set "PROG_!PROGRAM_COUNT!_NAME=Zoom"
     set "PROG_!PROGRAM_COUNT!_FILE=ZoomInstallerFull.exe"
-    set "AVAILABLE_LIST=!AVAILABLE_LIST!!PROGRAM_COUNT!,")
+    set "AVAILABLE_LIST=!AVAILABLE_LIST!!PROGRAM_COUNT!,"
     echo !PROGRAM_COUNT!. Zoom
 )
 
@@ -209,7 +209,7 @@ if exist "%PROGRAMS_DIR%\AnyDesk.exe" (
     set /a PROGRAM_COUNT+=1
     set "PROG_!PROGRAM_COUNT!_NAME=AnyDesk"
     set "PROG_!PROGRAM_COUNT!_FILE=AnyDesk.exe"
-    set "AVAILABLE_LIST=!AVAILABLE_LIST!!PROGRAM_COUNT!,")
+    set "AVAILABLE_LIST=!AVAILABLE_LIST!!PROGRAM_COUNT!,"
     echo !PROGRAM_COUNT!. AnyDesk
 )
 
@@ -217,23 +217,17 @@ if exist "%PROGRAMS_DIR%\rustdesk-1.4.0-x86_64.exe" (
     set /a PROGRAM_COUNT+=1
     set "PROG_!PROGRAM_COUNT!_NAME=RustDesk"
     set "PROG_!PROGRAM_COUNT!_FILE=rustdesk-1.4.0-x86_64.exe"
-    set "AVAILABLE_LIST=!AVAILABLE_LIST!!PROGRAM_COUNT!,")
+    set "AVAILABLE_LIST=!AVAILABLE_LIST!!PROGRAM_COUNT!,"
     echo !PROGRAM_COUNT!. RustDesk
 )
 
-if exist "%PROGRAMS_DIR%\VirtualBox-7.1.10-169112-Win.exe" (
-    set /a PROGRAM_COUNT+=1
-    set "PROG_!PROGRAM_COUNT!_NAME=VirtualBox"
-    set "PROG_!PROGRAM_COUNT!_FILE=VirtualBox-7.1.10-169112-Win.exe"
-    set "AVAILABLE_LIST=!AVAILABLE_LIST!!PROGRAM_COUNT!,")
-    echo !PROGRAM_COUNT!. VirtualBox
-)
+
 
 if exist "%PROGRAMS_DIR%\PatchCleaner_1.4.2.0.exe" (
     set /a PROGRAM_COUNT+=1
     set "PROG_!PROGRAM_COUNT!_NAME=PatchCleaner"
     set "PROG_!PROGRAM_COUNT!_FILE=PatchCleaner_1.4.2.0.exe"
-    set "AVAILABLE_LIST=!AVAILABLE_LIST!!PROGRAM_COUNT!,")
+    set "AVAILABLE_LIST=!AVAILABLE_LIST!!PROGRAM_COUNT!,"
     echo !PROGRAM_COUNT!. PatchCleaner
 )
 
@@ -241,7 +235,7 @@ if exist "%PROGRAMS_DIR%\LAPS.x64.msi" (
     set /a PROGRAM_COUNT+=1
     set "PROG_!PROGRAM_COUNT!_NAME=LAPS"
     set "PROG_!PROGRAM_COUNT!_FILE=LAPS.x64.msi"
-    set "AVAILABLE_LIST=!AVAILABLE_LIST!!PROGRAM_COUNT!,")
+    set "AVAILABLE_LIST=!AVAILABLE_LIST!!PROGRAM_COUNT!,"
     echo !PROGRAM_COUNT!. LAPS
 )
 
@@ -249,7 +243,7 @@ if exist "%PROGRAMS_DIR%\Autodesk_DWG_TrueView_2026_en-US_setup_webinstall.exe" 
     set /a PROGRAM_COUNT+=1
     set "PROG_!PROGRAM_COUNT!_NAME=Autodesk DWG TrueView"
     set "PROG_!PROGRAM_COUNT!_FILE=Autodesk_DWG_TrueView_2026_en-US_setup_webinstall.exe"
-    set "AVAILABLE_LIST=!AVAILABLE_LIST!!PROGRAM_COUNT!,")
+    set "AVAILABLE_LIST=!AVAILABLE_LIST!!PROGRAM_COUNT!,"
     echo !PROGRAM_COUNT!. Autodesk DWG TrueView
 )
 
@@ -272,6 +266,8 @@ echo.
 echo Installing selected programs...
 echo.
 timeout /t 3 > nul
+
+
 
 REM Now proceed to installation section
 goto ManualInstall
@@ -303,7 +299,8 @@ if exist "%PROGRAMS_DIR%\CitrixWorkspaceApp.exe" (
     echo.
     echo --- Installing Citrix Workspace ---
     echo --- Installing Citrix Workspace --- >> "%LOGFILE%"
-    start /wait "" "%PROGRAMS_DIR%\CitrixWorkspaceApp.exe" /silent /norestart /ALLOWSAVEPWD=A
+    REM Modified to include /forceinstall to ensure installation completes without hanging
+    start /wait "" "%PROGRAMS_DIR%\CitrixWorkspaceApp.exe" /silent /norestart /ALLOWSAVEPWD=A /forceinstall
     set RESULT=!ERRORLEVEL!
     if !RESULT! EQU 0 (
         echo SUCCESS: Citrix Workspace installed successfully.
@@ -379,8 +376,8 @@ if exist "%PROGRAMS_DIR%\Reader_tr_install.exe" (
     echo.
     echo --- Installing Adobe Reader ---
     echo --- Installing Adobe Reader --- >> "%LOGFILE%"
-    REM Changed command to bypass SmartScreen and use different installation flags
-    powershell -Command "Start-Process -FilePath \"%PROGRAMS_DIR%\Reader_tr_install.exe\" -ArgumentList '/sPB /rs /msi /norestart EULA_ACCEPT=YES' -Wait -Verb RunAs" 
+    REM Using direct command execution instead of PowerShell to avoid path issues
+    start /wait "" "%PROGRAMS_DIR%\Reader_tr_install.exe" /sPB /rs /msi /norestart EULA_ACCEPT=YES
     set RESULT=!ERRORLEVEL!
     if !RESULT! EQU 0 (
         echo SUCCESS: Adobe Reader installed successfully.
@@ -622,24 +619,6 @@ if exist "%PROGRAMS_DIR%\rustdesk-1.4.0-x86_64.exe" (
     echo --- SKIPPED: rustdesk-1.4.0-x86_64.exe not found. >> "%LOGFILE%"
 )
 
-REM Install VirtualBox
-if exist "%PROGRAMS_DIR%\VirtualBox-7.1.10-169112-Win.exe" (
-    echo.
-    echo --- Installing VirtualBox ---
-    echo --- Installing VirtualBox --- >> "%LOGFILE%"
-    start /wait "" "%PROGRAMS_DIR%\VirtualBox-7.1.10-169112-Win.exe" --silent
-    set RESULT=!ERRORLEVEL!
-    if !RESULT! EQU 0 (
-        echo SUCCESS: VirtualBox installed successfully.
-        echo SUCCESS: VirtualBox installed successfully. >> "%LOGFILE%"
-    ) else (
-        echo FAILED: VirtualBox installation failed with error code !RESULT!.
-        echo FAILED: VirtualBox installation failed with error code !RESULT!. >> "%LOGFILE%"
-    )
-) else (
-    echo --- SKIPPED: VirtualBox-7.1.10-169112-Win.exe not found.
-    echo --- SKIPPED: VirtualBox-7.1.10-169112-Win.exe not found. >> "%LOGFILE%"
-)
 
 REM Install PatchCleaner
 if exist "%PROGRAMS_DIR%\PatchCleaner_1.4.2.0.exe" (
@@ -733,7 +712,8 @@ if exist "%PROGRAMS_DIR%\CitrixWorkspaceApp.exe" (
         echo.
         echo --- Installing Citrix Workspace ---
         echo --- Installing Citrix Workspace --- >> "%LOGFILE%"
-        start /wait "" "%PROGRAMS_DIR%\CitrixWorkspaceApp.exe" /silent /norestart /ALLOWSAVEPWD=A
+        REM Modified to include /forceinstall to ensure installation completes without hanging
+        start /wait "" "%PROGRAMS_DIR%\CitrixWorkspaceApp.exe" /silent /norestart /ALLOWSAVEPWD=A /forceinstall
         set RESULT=!ERRORLEVEL!
         if !RESULT! EQU 0 (
             echo SUCCESS: Citrix Workspace installed successfully.
@@ -817,8 +797,8 @@ if exist "%PROGRAMS_DIR%\Reader_tr_install.exe" (
         echo.
         echo --- Installing Adobe Reader ---
         echo --- Installing Adobe Reader --- >> "%LOGFILE%"
-        REM Changed command to bypass SmartScreen and use different installation flags
-        powershell -Command "Start-Process -FilePath \"%PROGRAMS_DIR%\Reader_tr_install.exe\" -ArgumentList '/sPB /rs /msi /norestart EULA_ACCEPT=YES' -Wait -Verb RunAs" 
+        REM Using direct command execution instead of PowerShell to avoid path issues
+        start /wait "" "%PROGRAMS_DIR%\Reader_tr_install.exe" /sPB /rs /msi /norestart EULA_ACCEPT=YES
         set RESULT=!ERRORLEVEL!
         if !RESULT! EQU 0 (
             echo SUCCESS: Adobe Reader installed successfully.
@@ -1085,26 +1065,6 @@ if exist "%PROGRAMS_DIR%\rustdesk-1.4.0-x86_64.exe" (
     )
 )
 
-REM Install VirtualBox
-if exist "%PROGRAMS_DIR%\VirtualBox-7.1.10-169112-Win.exe" (
-    if "!INSTALL_19!"=="1" (
-        echo.
-        echo --- Installing VirtualBox ---
-        echo --- Installing VirtualBox --- >> "%LOGFILE%"
-        start /wait "" "%PROGRAMS_DIR%\VirtualBox-7.1.10-169112-Win.exe" --silent
-        set RESULT=!ERRORLEVEL!
-        if !RESULT! EQU 0 (
-            echo SUCCESS: VirtualBox installed successfully.
-            echo SUCCESS: VirtualBox installed successfully. >> "%LOGFILE%"
-        ) else (
-            echo FAILED: VirtualBox installation failed with error code !RESULT!.
-            echo FAILED: VirtualBox installation failed with error code !RESULT!. >> "%LOGFILE%"
-        )
-    ) else (
-        echo --- SKIPPED: VirtualBox-7.1.10-169112-Win.exe not found or installation not selected.
-        echo --- SKIPPED: VirtualBox-7.1.10-169112-Win.exe not found or installation not selected. >> "%LOGFILE%"
-    )
-)
 
 REM Install PatchCleaner
 if exist "%PROGRAMS_DIR%\PatchCleaner_1.4.2.0.exe" (
