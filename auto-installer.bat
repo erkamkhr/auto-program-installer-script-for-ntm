@@ -377,7 +377,7 @@ if exist "%PROGRAMS_DIR%\Reader_tr_install.exe" (
     echo --- Installing Adobe Reader ---
     echo --- Installing Adobe Reader --- >> "%LOGFILE%"
     REM Using direct command execution instead of PowerShell to avoid path issues
-    start /wait "" "%PROGRAMS_DIR%\Reader_tr_install.exe" /sPB /rs /msi /norestart EULA_ACCEPT=YES
+    start /wait "" "%PROGRAMS_DIR%\Reader_tr_install.exe"  /norestart EULA_ACCEPT=YES
     set RESULT=!ERRORLEVEL!
     if !RESULT! EQU 0 (
         echo SUCCESS: Adobe Reader installed successfully.
